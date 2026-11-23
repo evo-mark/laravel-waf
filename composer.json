@@ -1,0 +1,15 @@
+{
+    "name": "evo-mark/laravel-waf",
+    "description": "WAF controller for a Laravel application",
+    "type": "library",
+    "require": {
+        "spatie/laravel-package-tools": "dev-main"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EvoMark\\LaravelWaf\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
