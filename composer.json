@@ -3,7 +3,7 @@
     "description": "WAF controller for a Laravel application",
     "type": "library",
     "require": {
-        "spatie/laravel-package-tools": "dev-main"
+        "spatie/laravel-package-tools": "^1.9"
     },
     "license": "MIT",
     "autoload": {
@@ -11,5 +11,6 @@
             "EvoMark\\LaravelWaf\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
