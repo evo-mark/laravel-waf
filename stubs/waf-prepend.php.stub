@@ -21,3 +21,11 @@ if (PHP_SAPI === 'cli' || defined('LARAVEL_WAF_PREPENDED')) {
 }
 
 define('LARAVEL_WAF_PREPENDED', true);
+
+$wafBootstrap = dirname(__DIR__) . '/vendor/evo-mark/laravel-waf/lib/bootstrap.php';
+
+if (is_file($wafBootstrap)) {
+    require_once $wafBootstrap;
+}
+
+unset($wafBootstrap);

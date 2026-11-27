@@ -14,10 +14,12 @@ class LaravelWafServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name('laravel-waf')
+            ->hasConfigFile('waf')
             ->hasMigrations(['laravel_waf__create_waf_rules_table'])
             ->runsMigrations()
             ->hasInstallCommand(function (InstallCommand $command) {
-                $command->endWith(fn (InstallCommand $command) => app(InstallPrependFile::class)($command));
+                $command->publishConfigFile()
+                    ->endWith(fn (InstallCommand $command) => app(InstallPrependFile::class)($command));
             });
     }
 }
